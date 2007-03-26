@@ -1,13 +1,23 @@
 <?php
 global $gBitSystem;
 
+if( !defined( 'ACTIVE_PACKAGE' ) ) {
+	define( 'ACTIVE_PACKAGE', 'sitehome' );
+}
+
 $registerHash = array(
 	'package_name' => 'sitehome',
 	'package_path' => dirname( __FILE__ ).'/',
+	'homeable' => TRUE,
 );
 $gBitSystem->registerPackage( $registerHash );
 
 if( $gBitSystem->isPackageActive( 'sitehome' ) ) {
-	$gBitSystem->registerAppMenu( sitehome_PKG_NAME, ucfirst( SITEHOME_PKG_DIR ), SITEHOME_PKG_URL.'index.php', 'bitpackage:sitehome/menu_sitehome.tpl', SITEHOME_PKG_NAME );
+	$menuHash = array(
+		'package_name'  => SITEHOME_PKG_NAME,
+		'index_url'     => SITEHOME_PKG_URL.'index.php',
+		'menu_template' => 'bitpackage:sitehome/menu_sitehome.tpl',
+	);
+	$gBitSystem->registerAppMenu( $menuHash );
 }
 ?>
