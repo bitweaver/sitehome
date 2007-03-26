@@ -52,6 +52,9 @@ $gBitInstaller->registerPreferences( SITEHOME_PKG_NAME, array(
 	array( SITEHOME_PKG_NAME, 'sitehome_list_title', 'y' ),
 	array( SITEHOME_PKG_NAME, 'sitehome_list_description', 'y' ),
 	array( SITEHOME_PKG_NAME, 'sitehome_list_sitehomes', 'y' ),
+	array( SITEHOME_PKG_NAME, 'sitehome_display_title', 'y' ),
+	array( SITEHOME_PKG_NAME, 'sitehome_display_description', 'y' ),
+	array( SITEHOME_PKG_NAME, 'sitehome_display_date', 'y' ),
 	array( SITEHOME_PKG_NAME, 'sitehome_home_sitehome', ''),
 ) );
 ?>

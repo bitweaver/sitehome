@@ -1,5 +1,5 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_sitehome/admin/admin_sitehome_inc.php,v 1.2 2007/03/26 20:33:31 wjames5 Exp $
+// $Header: /cvsroot/bitweaver/_bit_sitehome/admin/admin_sitehome_inc.php,v 1.3 2007/03/26 22:05:14 wjames5 Exp $
 // Copyright (c) 2005 bitweaver SiteHome
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
@@ -41,6 +41,30 @@ if( $processForm ) {
 	}
 
 }
+
+
+$formSiteHomeOpts = array(
+	"sitehome_display_title" => array(
+		'label' => 'Title',
+		'note' => 'Display the title.',
+	),
+	"sitehome_display_description" => array(
+		'label' => 'Description',
+		'note' => 'Display the description.',
+	),
+	"sitehome_display_date" => array(
+		'label' => 'Date',
+		'note' => 'Display the creation and modification dates.',
+	),
+);
+$gBitSmarty->assign( 'formSiteHomeOpts',$formSiteHomeOpts );
+
+if (isset($_REQUEST["optsTabSubmit"])) {
+	foreach( $formSiteHomeOpts as $item => $data ) {
+		simple_set_toggle( $item, SITEHOME_PKG_NAME );
+	}
+}
+
 
 $sitehome = new BitSiteHome();
 $sitehomes = $sitehome->getList( $_REQUEST );
