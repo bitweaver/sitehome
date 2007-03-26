@@ -1,0 +1,25 @@
+The sitehome package is largely just a hack to the sample package.
+In order to get it running, follow the instructions later in this
+file. If you have any questions, get ahold of lugie on IRC.
+------------------------------------------------------------------
+
+Here is how you get bitweaver to go to its home directory upon 
+first visit:
+
+1. Install the package as usual and set proper permissions.
+
+2. Visit the administration panel, then go to the 
+   Kernel > Features screen.
+
+3. Click on the Homepage Settings tab, then choose "Sitehome" as
+   the home package.
+   
+   This is will result in people ending up at 
+   http://mydomain.com/sitehome/ when visiting
+   http://mydomain.com/. Users will also be directed here after
+   logging in or out.
+
+4. In order to get visitors to stay at your site root, see the
+   file index.php.example. This file *should* work by just
+   putting it in the root of your bw install and replacing the
+   existing index.php file. Make sure you back up, just in case!
