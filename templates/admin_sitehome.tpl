@@ -3,7 +3,7 @@
 	{jstabs}
 		{jstab title="Home SiteHome"}
 			{legend legend="Select Homepage"}
-				<input type="hidden" name="page" value="{$page}" />
+{*				<input type="hidden" name="page" value="{$page}" /> *}
 				<div class="row">
 					{formlabel label="Current Homepage" for="homeSiteHome"}
 					{forminput}

@@ -1,12 +1,12 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_sitehome/admin/admin_sitehome_inc.php,v 1.1 2007/03/26 16:57:53 lugie Exp $
+// $Header: /cvsroot/bitweaver/_bit_sitehome/admin/admin_sitehome_inc.php,v 1.2 2007/03/26 20:33:31 wjames5 Exp $
 // Copyright (c) 2005 bitweaver SiteHome
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
 
 require_once( SITEHOME_PKG_PATH.'BitSiteHome.php' );
 
-if (isset($_REQUEST["sitehomeset"]) && isset($_REQUEST["homeSiteHome"])) {
+if (isset($_REQUEST["homeTabSubmit"]) && isset($_REQUEST["homeSiteHome"])) {
 	$gBitSystem->storeConfig("home_sitehome", $_REQUEST["homeSiteHome"], SITEHOME_PKG_NAME);
 	$gBitSmarty->assign('home_sitehome', $_REQUEST["homeSiteHome"]);
 }
@@ -44,5 +44,5 @@ if( $processForm ) {
 
 $sitehome = new BitSiteHome();
 $sitehomes = $sitehome->getList( $_REQUEST );
-$gBitSmarty->assign_by_ref('sitehomes', $sitehomes['data']);
+$gBitSmarty->assign_by_ref('sitehomes', $sitehomes);
 ?>

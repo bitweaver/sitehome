@@ -1,5 +1,5 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_sitehome/index.php,v 1.1 2007/03/26 16:57:53 lugie Exp $
+// $Header: /cvsroot/bitweaver/_bit_sitehome/index.php,v 1.2 2007/03/26 20:33:31 wjames5 Exp $
 // Copyright (c) 2004 bitweaver SiteHome
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
@@ -14,7 +14,7 @@ $gBitSystem->verifyPackage( 'sitehome' );
 $gBitSystem->verifyPermission( 'p_sitehome_read' );
 
 if( !isset( $_REQUEST['sitehome_id'] ) ) {
-	$_REQUEST['sitehome_id'] = $gBitSystem->getConfig( "home_sitehome" );
+	$_REQUEST['sitehome_id'] = $gBitSystem->getConfig( "home_sitehome", "Home" );
 }
 
 require_once( SITEHOME_PKG_PATH.'lookup_sitehome_inc.php' );
