@@ -3,8 +3,10 @@ global $gBitSystem;
 
 /* THIS IS A PROBLEM - it causes sitehome to frequently be the active package
  * which makes menus break - among other unknown potential problems. 
- * If it is here for a reason, what ever it is attempting to address should be 
- * delt with some other way -wjames5
+ * It was used to keep kernel menus from appearing on the root index.php page.
+ * Instead define('ACTIVE_PACKAGE', 'sitehome'); has been added to the first line
+ * of the sitehome index.php.example file - which becomes the new root index.php file.
+ * -wjames5
 
 if( !defined( 'ACTIVE_PACKAGE' ) ) {
 	define( 'ACTIVE_PACKAGE', 'sitehome' );

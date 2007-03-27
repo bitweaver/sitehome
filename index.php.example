@@ -1,6 +1,6 @@
 <?php
 /**
-* @version $Header: /cvsroot/bitweaver/_bit_sitehome/index.php.example,v 1.1 2007/03/26 16:57:53 lugie Exp $
+* @version $Header: /cvsroot/bitweaver/_bit_sitehome/index.php.example,v 1.2 2007/03/27 21:39:13 wjames5 Exp $
 
 * @package bitweaver
 */
@@ -20,6 +20,7 @@
 //	';
 //	die;
 //}
+define('ACTIVE_PACKAGE', 'sitehome');
 
 require_once ('bit_setup_inc.php');
 
