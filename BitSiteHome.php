@@ -1,7 +1,7 @@
 <?php
 /**
-* $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.1 2007/03/26 16:57:53 lugie Exp $
-* $Id: BitSiteHome.php,v 1.1 2007/03/26 16:57:53 lugie Exp $
+* $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.2 2007/04/03 19:11:43 wjames5 Exp $
+* $Id: BitSiteHome.php,v 1.2 2007/04/03 19:11:43 wjames5 Exp $
 */
 
 /**
@@ -10,7 +10,7 @@
 *
 * @date created 2004/8/15
 * @author spider <spider@steelsun.com>
-* @version $Revision: 1.1 $ $Date: 2007/03/26 16:57:53 $ $Author: lugie $
+* @version $Revision: 1.2 $ $Date: 2007/04/03 19:11:43 $ $Author: wjames5 $
 * @class BitSiteHome
 */
 
@@ -247,7 +247,7 @@ class BitSiteHome extends LibertyAttachable {
 		$query = "SELECT ts.*, lc.`content_id`, lc.`title`, lc.`data` $selectSql
 			FROM `".BIT_DB_PREFIX."sitehomes` ts INNER JOIN `".BIT_DB_PREFIX."liberty_content` lc ON( lc.`content_id` = ts.`content_id` ) $joinSql
 			WHERE lc.`content_type_guid` = ? $whereSql
-			ORDER BY ".$this->mDb->convert_sortmode( $sort_mode );
+			ORDER BY ".$this->mDb->convertSortmode( $sort_mode );
 		$query_cant = "select count(*)
 				FROM `".BIT_DB_PREFIX."sitehomes` ts INNER JOIN `".BIT_DB_PREFIX."liberty_content` lc ON( lc.`content_id` = ts.`content_id` ) $joinSql
 			WHERE lc.`content_type_guid` = ? $whereSql";
