@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/remove_sitehome.php,v 1.1 2007/03/26 16:57:53 lugie Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/remove_sitehome.php,v 1.2 2007/10/25 17:14:15 nickpalmer Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: remove_sitehome.php,v 1.1 2007/03/26 16:57:53 lugie Exp $
+ * $Id: remove_sitehome.php,v 1.2 2007/10/25 17:14:15 nickpalmer Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -33,7 +33,7 @@ if( isset( $_REQUEST["confirm"] ) ) {
 		header ("location: ".BIT_ROOT_URL );
 		die;
 	} else {
-		vd( $gContent->mErrors );
+		$gBitSystem->fatalError( "Error Deleting", "There was an error deleting site home: " . vc($gContent->mErrors ) );
 	}
 }
 
