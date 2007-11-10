@@ -1,5 +1,5 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_sitehome/index.php,v 1.2 2007/03/26 20:33:31 wjames5 Exp $
+// $Header: /cvsroot/bitweaver/_bit_sitehome/index.php,v 1.3 2007/11/10 21:45:04 wjames5 Exp $
 // Copyright (c) 2004 bitweaver SiteHome
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
@@ -13,16 +13,17 @@ $gBitSystem->verifyPackage( 'sitehome' );
 // Now check permissions to access this page
 $gBitSystem->verifyPermission( 'p_sitehome_read' );
 
+//this is just to get a page title
 if( !isset( $_REQUEST['sitehome_id'] ) ) {
 	$_REQUEST['sitehome_id'] = $gBitSystem->getConfig( "home_sitehome", "Home" );
 }
-
+$lookupHash = $_REQUEST;
 require_once( SITEHOME_PKG_PATH.'lookup_sitehome_inc.php' );
-
-$gContent->addHit();
-
-$gBitSmarty->assign( 'vTabs', TRUE );
+$title = $gContent->getTitle()?$gContent->getTitle():'Home';
 
 // Display the template
-$gBitSystem->display( 'bitpackage:sitehome/sitehome_display.tpl', $gContent->getTitle() );
+$gDefaultCenter = 'bitpackage:sitehome/center_sitehome_page.tpl';
+$gBitSmarty->assign_by_ref( 'gDefaultCenter', $gDefaultCenter );
+
+$gBitSystem->display( 'bitpackage:kernel/dynamic.tpl', $title );
 ?>
