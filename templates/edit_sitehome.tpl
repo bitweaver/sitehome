@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_sitehome/templates/edit_sitehome.tpl,v 1.1 2007/03/26 19:05:56 lugie Exp $ *}
+{* $Header: /cvsroot/bitweaver/_bit_sitehome/templates/edit_sitehome.tpl,v 1.2 2007/11/18 17:59:45 nickpalmer Exp $ *}
 {strip}
 <div class="floaticon">{bithelp}</div>
 
@@ -67,6 +67,17 @@
 						</div>
 					{/legend}
 				{/jstab}
+
+				{if $gBitUser->hasPermission('p_liberty_attach_attachments') }
+					{jstab title="Attachments"}
+						<div class=row>
+						{legend legend="Attachments"}
+							{include file="bitpackage:liberty/edit_storage.tpl"}
+
+						{/legend}
+						</div>
+					{/jstab}
+				{/if}
 
 				{* any service edit template tabs *}
 				{include file="bitpackage:liberty/edit_services_inc.tpl serviceFile=content_edit_tab_tpl}
