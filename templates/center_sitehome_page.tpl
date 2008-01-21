@@ -8,6 +8,7 @@
 			{if $gBitUser->hasPermission( 'p_sitehome_remove' )}
 				<a title="{tr}Remove this sitehome{/tr}" href="{$smarty.const.SITEHOME_PKG_URL}remove_sitehome.php?sitehome_id={$gContent->mInfo.sitehome_id}">{biticon ipackage="icons" iname="edit-delete" iexplain="Remove Sitehome"}</a>
 			{/if}
+			{include file="bitpackage:liberty/services_inc.tpl" serviceLocation='icon' serviceHash=$gContent->mInfo}
 		{/if}<!-- end print_page -->
 	</div><!-- end .floaticon -->
 	
