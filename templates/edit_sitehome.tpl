@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_sitehome/templates/edit_sitehome.tpl,v 1.2 2007/11/18 17:59:45 nickpalmer Exp $ *}
+{* $Header: /cvsroot/bitweaver/_bit_sitehome/templates/edit_sitehome.tpl,v 1.3 2008/02/26 19:52:19 nickpalmer Exp $ *}
 {strip}
 <div class="floaticon">{bithelp}</div>
 
@@ -6,7 +6,7 @@
 	{if $preview}
 		<h2>Preview {$gContent->mInfo.title|escape}</h2>
 		<div class="preview">
-			{include file="bitpackage:sitehome/sitehome_display.tpl" page=`$gContent->mInfo.sitehome_id`}
+			{include file="bitpackage:sitehome/center_sitehome_page.tpl" page=`$gContent->mInfo.sitehome_id`}
 		</div>
 	{/if}
 
