@@ -1,19 +1,19 @@
 <?php
 /**
-* $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.2 2007/04/03 19:11:43 wjames5 Exp $
-* $Id: BitSiteHome.php,v 1.2 2007/04/03 19:11:43 wjames5 Exp $
-*/
+ * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.3 2008/06/19 05:34:07 lsces Exp $
+ * 
+ * SiteHome class to illustrate best practices when creating a new bitweaver package that
+ * builds on core bitweaver functionality, such as the Liberty CMS engine
+ *
+ * @date created 2004/8/15
+ * @author spider <spider@steelsun.com>
+ *
+ * @package sitehome
+ */
 
 /**
-* SiteHome class to illustrate best practices when creating a new bitweaver package that
-* builds on core bitweaver functionality, such as the Liberty CMS engine
-*
-* @date created 2004/8/15
-* @author spider <spider@steelsun.com>
-* @version $Revision: 1.2 $ $Date: 2007/04/03 19:11:43 $ $Author: wjames5 $
-* @class BitSiteHome
-*/
-
+ * Initialize
+ */
 require_once( LIBERTY_PKG_PATH.'LibertyAttachable.php' );
 
 /**
@@ -21,6 +21,9 @@ require_once( LIBERTY_PKG_PATH.'LibertyAttachable.php' );
 */
 define( 'BITSITEHOME_CONTENT_TYPE_GUID', 'bitsitehome' );
 
+/**
+ * @package sitehome
+ */
 class BitSiteHome extends LibertyAttachable {
 	/**
 	* Primary key for our mythical SiteHome class object & table
