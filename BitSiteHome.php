@@ -1,11 +1,11 @@
 <?php
 /**
- * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.3 2008/06/19 05:34:07 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.4 2008/06/19 09:34:24 lsces Exp $
  * 
  * SiteHome class to illustrate best practices when creating a new bitweaver package that
  * builds on core bitweaver functionality, such as the Liberty CMS engine
  *
- * @date created 2004/8/15
+ * date created 2004/8/15
  * @author spider <spider@steelsun.com>
  *
  * @package sitehome
