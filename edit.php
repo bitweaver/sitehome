@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.2 2008/06/19 05:34:07 lsces Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.3 2008/06/25 22:21:24 spiderr Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: edit.php,v 1.2 2008/06/19 05:34:07 lsces Exp $
+ * $Id: edit.php,v 1.3 2008/06/25 22:21:24 spiderr Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -80,5 +80,5 @@ if( $gBitSystem->isPackageActive( 'quicktags' ) ) {
 $gBitSmarty->assign( 'textarea_id', 'editsitehome' );
 
 // Display the template
-$gBitSystem->display( 'bitpackage:sitehome/edit_sitehome.tpl', tra('SiteHome') );
+$gBitSystem->display( 'bitpackage:sitehome/edit_sitehome.tpl', tra('SiteHome') , array( 'display_mode' => 'edit' ));
 ?>

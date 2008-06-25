@@ -1,5 +1,5 @@
 <?php
-// $Header: /cvsroot/bitweaver/_bit_sitehome/index.php,v 1.5 2008/02/17 00:23:36 nickpalmer Exp $
+// $Header: /cvsroot/bitweaver/_bit_sitehome/index.php,v 1.6 2008/06/25 22:21:24 spiderr Exp $
 // Copyright (c) 2004 bitweaver SiteHome
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
@@ -24,5 +24,5 @@ $title = $gContent->getTitle()?$gContent->getTitle():'Home';
 $gDefaultCenter = 'bitpackage:sitehome/center_sitehome_page.tpl';
 $gBitSmarty->assign_by_ref( 'gDefaultCenter', $gDefaultCenter );
 
-$gBitSystem->display( 'bitpackage:kernel/dynamic.tpl', $title );
+$gBitSystem->display( 'bitpackage:kernel/dynamic.tpl', $title , array( 'display_mode' => 'display' ));
 ?>
