@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.3 2008/06/25 22:21:24 spiderr Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.4 2008/10/20 21:40:11 spiderr Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: edit.php,v 1.3 2008/06/25 22:21:24 spiderr Exp $
+ * $Id: edit.php,v 1.4 2008/10/20 21:40:11 spiderr Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -22,7 +22,7 @@ require_once( '../bit_setup_inc.php' );
 $gBitSystem->verifyPackage( 'sitehome' );
 
 // Now check permissions to access this page
-$gBitSystem->verifyPermission('p_sitehome_edit' );
+$gContent->verifyEditPermission();
 
 require_once(SITEHOME_PKG_PATH.'lookup_sitehome_inc.php' );
 

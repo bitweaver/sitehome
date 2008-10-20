@@ -40,9 +40,8 @@ $gBitInstaller->registerSchemaDefault( SITEHOME_PKG_NAME, array(
 $gBitInstaller->registerUserPermissions( SITEHOME_PKG_NAME, array(
 	array( 'p_sitehome_admin', 'Can admin sitehome', 'admin', SITEHOME_PKG_NAME ),
 	array( 'p_sitehome_create', 'Can create a sitehome', 'registered', SITEHOME_PKG_NAME ),
-	array( 'p_sitehome_edit', 'Can edit any sitehome', 'editors', SITEHOME_PKG_NAME ),
+	array( 'p_sitehome_update', 'Can edit any sitehome', 'editors', SITEHOME_PKG_NAME ),
 	array( 'p_sitehome_read', 'Can read sitehome', 'basic',  SITEHOME_PKG_NAME ),
-	array( 'p_sitehome_remove', 'Can delete sitehome', 'admin',  SITEHOME_PKG_NAME ),
 ) );
 
 // ### Default Preferences
