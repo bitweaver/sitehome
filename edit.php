@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.5 2008/11/10 16:44:16 nickpalmer Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.6 2008/11/26 21:29:37 wjames5 Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: edit.php,v 1.5 2008/11/10 16:44:16 nickpalmer Exp $
+ * $Id: edit.php,v 1.6 2008/11/26 21:29:37 wjames5 Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -35,6 +35,7 @@ if( isset( $_REQUEST['sitehome']["description"] ) ) {
 }
 
 if( isset( $_REQUEST["format_guid"] ) ) {
+	$_REQUEST['sitehome']['format_guid'] = $_REQUEST["format_guid"];
 	$gContent->mInfo['format_guid'] = $_REQUEST["format_guid"];
 }
 
