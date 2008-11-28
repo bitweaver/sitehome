@@ -1,6 +1,6 @@
 <?php
 /**
- * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.5 2008/11/28 13:36:58 nickpalmer Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.6 2008/11/28 16:17:21 nickpalmer Exp $
  * 
  * SiteHome class to illustrate best practices when creating a new bitweaver package that
  * builds on core bitweaver functionality, such as the Liberty CMS engine
@@ -49,8 +49,8 @@ class BitSiteHome extends LibertyAttachable {
 		) );
 
 		// Permission setup
-		$this->mViewContentPerm  = 'p_sitehome_view';
-		$this->mCreateContentPerm  = 'p_sitehome_post';
+		$this->mViewContentPerm  = 'p_sitehome_read';
+		$this->mCreateContentPerm  = 'p_sitehome_create';
 		$this->mUpdateContentPerm  = 'p_sitehome_update';
 		$this->mAdminContentPerm = 'p_sitehome_admin';
 	}
