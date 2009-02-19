@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/lookup_sitehome_inc.php,v 1.3 2008/06/19 05:34:07 lsces Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/lookup_sitehome_inc.php,v 1.4 2009/02/19 15:51:58 tekimaki_admin Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: lookup_sitehome_inc.php,v 1.3 2008/06/19 05:34:07 lsces Exp $
+ * $Id: lookup_sitehome_inc.php,v 1.4 2009/02/19 15:51:58 tekimaki_admin Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -45,4 +45,3 @@ if( empty( $gContent ) || !is_object( $gContent ) || strtolower( get_class( $gCo
 	$gContent->load();
 	$gBitSmarty->assign_by_ref( "gContent", $gContent );
 }
-?>
