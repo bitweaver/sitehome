@@ -1,6 +1,6 @@
 <?php
 /**
- * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.6 2008/11/28 16:17:21 nickpalmer Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.7 2009/02/19 15:52:20 tekimaki_admin Exp $
  * 
  * SiteHome class to illustrate best practices when creating a new bitweaver package that
  * builds on core bitweaver functionality, such as the Liberty CMS engine
@@ -225,6 +225,27 @@ class BitSiteHome extends LibertyAttachable {
 	**/
 	function isValid() {
 		return( $this->verifyId( $this->mSiteHomeId ) );
+	}
+
+	function preparePreview( &$pParamHash ){
+		if( isset( $pParamHash['sitehome']["title"] ) ) {
+			$this->mInfo["title"] = $pParamHash['sitehome']["title"];
+		}
+
+		if( isset( $pParamHash['sitehome']["description"] ) ) {
+			$this->mInfo["description"] = $pParamHash['sitehome']["description"];
+		}
+
+		if( isset( $pParamHash["format_guid"] ) ) {
+			$pParamHash['sitehome']['format_guid'] = $pParamHash["format_guid"];
+			$this->mInfo['format_guid'] = $pParamHash["format_guid"];
+		}
+
+		if( isset( $pParamHash['sitehome']["edit"] ) ) {
+			$parseHash['no_cache'] = TRUE;
+			$parseHash['data'] = $this->mInfo["data"] = $pParamHash['sitehome']["edit"];
+			$this->mInfo['parsed_data'] = $this->parseData( $parseHash );
+		}
 	}
 
 	/**

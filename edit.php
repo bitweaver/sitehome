@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.6 2008/11/26 21:29:37 wjames5 Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.7 2009/02/19 15:52:20 tekimaki_admin Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: edit.php,v 1.6 2008/11/26 21:29:37 wjames5 Exp $
+ * $Id: edit.php,v 1.7 2009/02/19 15:52:20 tekimaki_admin Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -18,6 +18,7 @@
  */
 require_once( '../bit_setup_inc.php' );
 
+
 // Is package installed and enabled
 $gBitSystem->verifyPackage( 'sitehome' );
 
@@ -26,26 +27,10 @@ require_once(SITEHOME_PKG_PATH.'lookup_sitehome_inc.php' );
 // Now check permissions to access this page
 $gContent->verifyUpdatePermission();
 
-if( isset( $_REQUEST['sitehome']["title"] ) ) {
-	$gContent->mInfo["title"] = $_REQUEST['sitehome']["title"];
-}
-
-if( isset( $_REQUEST['sitehome']["description"] ) ) {
-	$gContent->mInfo["description"] = $_REQUEST['sitehome']["description"];
-}
-
-if( isset( $_REQUEST["format_guid"] ) ) {
-	$_REQUEST['sitehome']['format_guid'] = $_REQUEST["format_guid"];
-	$gContent->mInfo['format_guid'] = $_REQUEST["format_guid"];
-}
-
-if( isset( $_REQUEST['sitehome']["edit"] ) ) {
-	$gContent->mInfo["data"] = $_REQUEST['sitehome']["edit"];
-	$gContent->mInfo['parsed_data'] = $gContent->parseData();
-}
 
 // If we are in preview mode then preview it!
 if( isset( $_REQUEST["preview"] ) ) {
+	$gContent->preparePreview( $_REQUEST );
 	$gBitSmarty->assign('preview', 'y');
 	$gContent->invokeServices('content_preview_function');
 }
@@ -82,4 +67,3 @@ $gBitSmarty->assign( 'textarea_id', 'editsitehome' );
 
 // Display the template
 $gBitSystem->display( 'bitpackage:sitehome/edit_sitehome.tpl', tra('SiteHome') , array( 'display_mode' => 'edit' ));
-?>
