@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_sitehome/templates/edit_sitehome.tpl,v 1.5 2009/02/19 15:52:20 tekimaki_admin Exp $ *}
+{* $Header: /cvsroot/bitweaver/_bit_sitehome/templates/edit_sitehome.tpl,v 1.6 2009/05/05 18:54:45 wjames5 Exp $ *}
 {strip}
 <div class="floaticon">{bithelp}</div>
 
@@ -23,7 +23,7 @@
 	<div class="body">
 		{form enctype="multipart/form-data" id="editsitehomeform"}
 			{jstabs}
-				{jstab}
+				{jstab title="Edit"}
 					{legend legend="Edit/Create SiteHome Record"}
 						<input type="hidden" name="sitehome[sitehome_id]" value="{$gContent->mInfo.sitehome_id}" />
 
