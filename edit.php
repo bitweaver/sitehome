@@ -1,6 +1,6 @@
 <?php
 /**
- * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.7 2009/02/19 15:52:20 tekimaki_admin Exp $
+ * $Header: /cvsroot/bitweaver/_bit_sitehome/edit.php,v 1.8 2009/05/05 19:15:59 wjames5 Exp $
  *
  * Copyright (c) 2004 bitweaver.org
  * Copyright (c) 2003 tikwiki.org
@@ -8,7 +8,7 @@
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details
  *
- * $Id: edit.php,v 1.7 2009/02/19 15:52:20 tekimaki_admin Exp $
+ * $Id: edit.php,v 1.8 2009/05/05 19:15:59 wjames5 Exp $
  * @package sitehome
  * @subpackage functions
  */
@@ -41,10 +41,18 @@ else {
 // Pro
 // Check if the page has changed
 if( !empty( $_REQUEST["save_sitehome"] ) ) {
+	// Editing page needs general ticket verification
+	$gBitUser->verifyTicket();
 
 	// Check if all Request values are delivered, and if not, set them
 	// to avoid error messages. This can happen if some features are
 	// disabled
+
+	// need to set format_guid due to subhash being passed to store
+	// @TODO get rid of the subhash as that always creates complications for services
+	if( !empty( $_REQUEST['format_guid'] ) ){
+		$_REQUEST['sitehome']['format_guid'] = $_REQUEST['format_guid'];
+	}
 	if( $gContent->store( $_REQUEST['sitehome'] ) ) {
 		header( "Location: ".$gContent->getDisplayUrl() );
 		die;
