@@ -1,6 +1,6 @@
 <?php
 /**
- * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.7 2009/02/19 15:52:20 tekimaki_admin Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.8 2009/06/02 15:39:35 tekimaki_admin Exp $
  * 
  * SiteHome class to illustrate best practices when creating a new bitweaver package that
  * builds on core bitweaver functionality, such as the Liberty CMS engine
@@ -277,7 +277,7 @@ class BitSiteHome extends LibertyAttachable {
 		$query = "SELECT ts.*, lc.`content_id`, lc.`title`, lc.`data` $selectSql
 			FROM `".BIT_DB_PREFIX."sitehomes` ts INNER JOIN `".BIT_DB_PREFIX."liberty_content` lc ON( lc.`content_id` = ts.`content_id` ) $joinSql
 			WHERE lc.`content_type_guid` = ? $whereSql
-			ORDER BY ".$this->mDb->convertSortmode( $sort_mode );
+			ORDER BY lc.".$this->mDb->convertSortmode( $sort_mode );
 		$query_cant = "select count(*)
 				FROM `".BIT_DB_PREFIX."sitehomes` ts INNER JOIN `".BIT_DB_PREFIX."liberty_content` lc ON( lc.`content_id` = ts.`content_id` ) $joinSql
 			WHERE lc.`content_type_guid` = ? $whereSql";
