@@ -1,7 +1,7 @@
 <?php
 $tables = array(
 	'sitehomes' => "
-		sitehome_id I4 AUTO PRIMARY,
+		sitehome_id I4 PRIMARY,
 		content_id I4 NOTNULL,
 		description C(160)
 	",
@@ -24,13 +24,11 @@ $indices = array(
 );
 $gBitInstaller->registerSchemaIndexes( SITEHOME_PKG_NAME, $indices );
 
-/*// ### Sequences
+// ### Sequences
 $sequences = array (
-	'bit_sitehome_id_seq' => array( 'start' => 1 )
+	'sitehomes_sitehome_id_seq' => array( 'start' => 1 )
 );
 $gBitInstaller->registerSchemaSequences( SITEHOME_PKG_NAME, $sequences );
-*/
-
 
 $gBitInstaller->registerSchemaDefault( SITEHOME_PKG_NAME, array(
 	//      "INSERT INTO `".BIT_DB_PREFIX."bit_sitehome_types` (`type`) VALUES ('SiteHome')",
