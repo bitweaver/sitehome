@@ -1,6 +1,6 @@
 <?php
 /**
- * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.8 2009/06/02 15:39:35 tekimaki_admin Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.9 2010/04/17 22:46:08 wjames5 Exp $
  * 
  * SiteHome class to illustrate best practices when creating a new bitweaver package that
  * builds on core bitweaver functionality, such as the Liberty CMS engine
@@ -41,7 +41,7 @@ class BitSiteHome extends LibertyAttachable {
 		$this->mContentTypeGuid = BITSITEHOME_CONTENT_TYPE_GUID;
 		$this->registerContentType( BITSITEHOME_CONTENT_TYPE_GUID, array(
 			'content_type_guid' => BITSITEHOME_CONTENT_TYPE_GUID,
-			'content_description' => 'Site Homepage',
+			'content_name' => 'Site Homepage',
 			'handler_class' => 'BitSiteHome',
 			'handler_package' => 'sitehome',
 			'handler_file' => 'BitSiteHome.php',

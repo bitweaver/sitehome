@@ -54,4 +54,8 @@ $gBitInstaller->registerPreferences( SITEHOME_PKG_NAME, array(
 	array( SITEHOME_PKG_NAME, 'sitehome_display_date', 'y' ),
 	array( SITEHOME_PKG_NAME, 'sitehome_home_sitehome', ''),
 ) );
-?>
+
+// Requirements
+$gBitInstaller->registerRequirements( SITEHOME_PKG_NAME, array(
+	'liberty' => array( 'min' => '2.1.4' ),
+));
