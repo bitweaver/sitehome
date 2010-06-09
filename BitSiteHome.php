@@ -1,6 +1,6 @@
 <?php
 /**
- * @version $Header: /cvsroot/bitweaver/_bit_sitehome/BitSiteHome.php,v 1.9 2010/04/17 22:46:08 wjames5 Exp $
+ * @version $Header$
  * 
  * SiteHome class to illustrate best practices when creating a new bitweaver package that
  * builds on core bitweaver functionality, such as the Liberty CMS engine
