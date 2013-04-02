@@ -57,7 +57,7 @@
 
 						{if $gBitUser->hasPermission( 'p_sitehome_update' )}
 							<td class="actionicon">
-								{smartlink ititle="Edit" ifile="edit.php" ibiticon="icons/accessories-text-editor" sitehome_id=$sitehome.sitehome_id}
+								{smartlink ititle="Edit" ifile="edit.php" booticon="icon-edit" sitehome_id=$sitehome.sitehome_id}
 								<input type="checkbox" name="checked[]" title="{$sitehome.title|escape}" value="{$sitehome.sitehome_id}" />
 							</td>
 						{/if}
