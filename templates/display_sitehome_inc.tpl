@@ -4,8 +4,8 @@
 	<div class="floaticon">
 		{if $print_page ne 'y'}
 			{if $gContent->hasUpdatePermission()}
-				<a title="{tr}Edit this sitehome{/tr}" href="{$smarty.const.SITEHOME_PKG_URL}edit.php?sitehome_id={$gContent->mInfo.sitehome_id}">{biticon ipackage="icons" iname="accessories-text-editor" iexplain="Edit Sitehome"}</a>
-				<a title="{tr}Remove this sitehome{/tr}" href="{$smarty.const.SITEHOME_PKG_URL}remove_sitehome.php?sitehome_id={$gContent->mInfo.sitehome_id}">{biticon ipackage="icons" iname="edit-delete" iexplain="Remove Sitehome"}</a>
+				<a title="{tr}Edit this sitehome{/tr}" href="{$smarty.const.SITEHOME_PKG_URL}edit.php?sitehome_id={$gContent->mInfo.sitehome_id}">{booticon iname="icon-edit" ipackage="icons" iexplain="Edit Sitehome"}</a>
+				<a title="{tr}Remove this sitehome{/tr}" href="{$smarty.const.SITEHOME_PKG_URL}remove_sitehome.php?sitehome_id={$gContent->mInfo.sitehome_id}">{booticon iname="icon-trash" ipackage="icons" iexplain="Remove Sitehome"}</a>
 			{/if}
 			{include file="bitpackage:liberty/services_inc.tpl" serviceLocation='icon' serviceHash=$gContent->mInfo}
 		{/if}<!-- end print_page -->
