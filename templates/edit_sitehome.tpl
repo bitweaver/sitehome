@@ -6,7 +6,7 @@
 	{if $preview}
 		<h2>Preview {$gContent->mInfo.title|escape}</h2>
 		<div class="preview">
-			{include file="bitpackage:sitehome/display_sitehome_inc.tpl" page=`$gContent->mInfo.sitehome_id`}
+			{include file="bitpackage:sitehome/display_sitehome_inc.tpl" page=$gContent->mInfo.sitehome_id}
 		</div>
 	{/if}
 
