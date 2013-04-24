@@ -14,7 +14,7 @@
 			<input type="hidden" name="offset" value="{$control.offset|escape}" />
 			<input type="hidden" name="sort_mode" value="{$control.sort_mode|escape}" />
 
-			<table class="data">
+			<table class="table data">
 				<tr>
 					{if $gBitSystem->isFeatureActive( 'sitehome_list_sitehome_id' ) eq 'y'}
 						<th>{smartlink ititle="SiteHome Id" isort=sitehome_id offset=$control.offset iorder=desc idefault=1}</th>
