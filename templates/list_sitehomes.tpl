@@ -83,7 +83,7 @@
 						{/if}
 					</select>
 
-					<noscript><div><input type="submit" class="btn" value="{tr}Submit{/tr}" /></div></noscript>
+					<noscript><div><input type="submit" class="btn btn-default" value="{tr}Submit{/tr}" /></div></noscript>
 				</div>
 			{/if}
 		{/form}
