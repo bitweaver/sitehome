@@ -27,14 +27,14 @@
 					{legend legend="Edit/Create SiteHome Record"}
 						<input type="hidden" name="sitehome[sitehome_id]" value="{$gContent->mInfo.sitehome_id}" />
 
-						<div class="control-group">
+						<div class="form-group">
 							{formlabel label="Title" for="title"}
 							{forminput}
 								<input type="text" size="60" maxlength="200" name="sitehome[title]" id="title" value="{$gContent->mInfo.title|escape}" />
 							{/forminput}
 						</div>
 
-						<div class="control-group">
+						<div class="form-group">
 							{formlabel label="Description" for="description"}
 							{forminput}
 								<input size="60" type="text" name="sitehome[description]" id="description" value="{$gContent->mInfo.description|escape:html}" />
@@ -52,7 +52,7 @@
 							{include file="bitpackage:quicktags/quicktags_full.tpl"}
 						{/if}
 
-						<div class="control-group">
+						<div class="form-group">
 							{forminput}
 								<textarea {spellchecker} id="{$textarea_id}" name="sitehome[edit]" rows="{$smarty.cookies.rows|default:20}" cols="50">{$gContent->mInfo.data|escape:html}</textarea>
 							{/forminput}
@@ -61,7 +61,7 @@
 						{* any simple service edit options *}
 						{include file="bitpackage:liberty/edit_services_inc.tpl" serviceFile="content_edit_mini_tpl"}
 
-						<div class="control-group submit">
+						<div class="form-group submit">
 							<input type="submit" class="btn btn-default" name="preview" value="{tr}Preview{/tr}" /> 
 							<input type="submit" class="btn btn-default" name="save_sitehome" value="{tr}Save{/tr}" />
 						</div>
